@@ -14,6 +14,8 @@
 Just build it or pull it from jippi/pritunl. Run it something like this:
 
 ```sh
+docker run --privileged -e PRITUNL_MONGODB_URI="mongodb://172.17.0.1:27017/pritunl" -v /var/lib/pritunl:/var/lib/pritunl -p 443:443 -p 8443:8443 -p 1194:1194 -p 1194:1194/udp --name pritunl gergnz/pritunl:0.1
+
 docker run \
     -d \
     --privileged \
